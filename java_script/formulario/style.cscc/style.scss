@@ -1,0 +1,15 @@
+@import "corpoPagina", "header", "formulario", "resultado", "responsivo";
+
+p{
+    overflow-wrap: break-word;
+}
+body{
+    width:100%;
+    *{
+        max-width: 100%;
+    }
+}
+*{
+    margin: 0;
+    padding:0;
+}

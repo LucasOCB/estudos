@@ -1,0 +1,38 @@
+@media(min-width:800px){
+    form{
+        fieldset{
+            &.grupo{
+                &.grupo{
+                    display:flex;
+                    gap:15px;
+                }
+            }
+        }
+        #checkbox{
+            #divCheck{
+                width:100%;
+                div{
+                    display: inline;
+                }
+                div + div{
+                    margin-left:20px;
+                }
+            }
+        }
+    }
+    .seta{
+        top:500px;
+    }   
+}
+@media(max-width:500px){
+    #seuResultado{
+        margin-top:30px;
+    }
+    .seta{
+        top:1020px;
+        left:30%;
+    }
+    .seta2{
+        left:68%;
+    }
+}

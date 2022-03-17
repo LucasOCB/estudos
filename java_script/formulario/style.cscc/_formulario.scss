@@ -1,0 +1,102 @@
+form{
+    border:1px solid black;
+    margin-bottom:30px;
+    margin:0 auto;
+    *{
+        max-width:100%;
+    }
+    input, select, textarea, button{
+        border-radius:5px;
+    }
+    fieldset{
+        margin:15px 30px; 
+        border:none;
+        legend{
+            margin-bottom:10px;
+            &::after{
+                content:':';
+            }
+        }
+        input[type="text"], input[type="email"], textarea{
+            padding:0.2rem;
+            border:1px solid #59429d;
+            box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+            display:block;
+        }
+        #nome:focus, 
+        #sobrenome:focus, 
+        #email:focus, 
+        #experiencia:focus{
+            background-color:#f0f8ff;
+        }
+        .campo{
+            display:flex; 
+            margin-bottom:1rem; 
+            flex-direction:column;
+            #email, #nome, #sobrenome{
+                max-width: 170px;
+            }
+            label{
+                margin-bottom:0.2rem;
+                color:#59429d;
+                display:block;
+            }
+            select{
+                option{
+                    padding-right:1rem;
+                }
+            }
+        }
+        .senior{
+            display:flex; 
+            flex-direction:row; 
+            align-items: center;
+            label{
+                margin-right:10px;
+            }
+        }
+    }
+    #botao{
+        font-size:1.2rem; 
+        background-color:#59429d; 
+        color:#fff;
+        border:0;
+        margin-bottom:1rem;
+        box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+        text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+        margin-left:auto; margin-right:auto;
+        display:block;
+        margin-top:20px;
+        padding:10px 15px;
+        &:hover{
+            box-shadow:inset 2px 2px 2px rgba(0,0,0,0.2);
+            background:#ccbbff; 
+            cursor: pointer;
+        }
+    }
+}
+.seta{
+    position: absolute;
+    top:800px;
+    left: 7%;
+    animation-name: seta;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.seta2{
+    position: absolute;
+    left:92%;
+    animation-name: seta;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes seta{
+    50%{
+        transform: translatey(100px);
+    }
+    100%{
+        transform: translatey(0px);
+    }
+}

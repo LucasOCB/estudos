@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.cscc/style.css">
+    <title>formulario</title>
+</head>
+<body id="body">
+    <div id="header">
+        <h1 id="titulo">cadastro DEVs</h1>
+        <p id="subtitulo">complete suas informações</p>
+    </div>
+    <form action="">
+        <fieldset class="grupo">
+            <legend>informações</legend>
+            <div class="campo">
+                <label for="nome"><strong>nome:</strong></label>
+                <input type="text" name="nome" id="nome" class="envioB" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>sobrenome</strong>:</label>
+                <input type="text" name="sobrenome" id="sobrenome" class="envioB" required>
+            </div>
+            <div class="campo">
+                <label for="email"><strong>email</strong>:</label>
+                <input type="email" name="email" id="email" class="envioB"  required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>area de atuação</legend>
+            <div class="campo" id="aplicação">
+                <label for=""><strong>de qual lado da aplicação você desenvolve</strong></label>
+                <label for="">
+                    <input type="radio" name="devweb" class="aplicacaoTipo" value="front-end"  checked>front-end
+                </label>
+                <label for="">
+                    <input type="radio" name="devweb" value="beck-end" class="aplicacaoTipo">back-end
+                </label>
+                <label for="">
+                    <input type="radio" name="devweb" value="fullstack" class="aplicacaoTipo">fullstack
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>grau de atuação</legend>
+            <div class="campo senior">
+                <label for=""><strong>senioridade:</strong></label>
+                <select name="" id="senioridade" class="envioB">
+                    <option selected disabled value=""></option>
+                    <option value="Junior">Junior</option>
+                    <option value="Pleno">Pleno</option>
+                    <option value="Senior">Senior</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset class="grupo" id="checkbox">
+            <legend>conhecimento</legend>
+            <div id="divCheck">
+                <label for="senioridade"><strong>selecione a tegnologia que conheça</strong>:</label><br><br>
+                
+                <div>
+                    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML" class="tecnologias">
+                    <label type="tecnoligia1">HTML</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS" class="tecnologias">
+                    <label type="tecnoligia2">CSS</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Javascript" class="tecnologias">
+                    <label type="tecnoligia3">Javascript</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP" class="tecnologias">
+                    <label type="tecnoligia4">PHP</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#" class="tecnologias">
+                    <label type="tecnoligia5">C#</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python" class="tecnologias">
+                    <label type="tecnoligia6">Python</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java" class="tecnologias">
+                    <label type="tecnoligia7">Java</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>informações extras</legend>
+            <div>
+                <label for=""><strong>conte um pouco da sua experiência:</strong></label><br>
+                <textarea name="experiencia" id="experiencia" cols="40" rows="13" class="envioB"></textarea>
+            </div>
+        </fieldset>
+        <button type="submit" id="botao">Concluido</button>
+    </form>
+
+    <p class="seta"></p>
+    <p class="seta seta2"></p>
+
+    <div id="seuResultado">
+        <h1 id="titulo2">aqui está seu resultado</h1>
+        <div id="resultado">
+            <div>nome:
+                <p id="nomeResultado"></p>
+            </div>
+            <div>sobre-nome:
+                <p id="sobre_nomeResultado"></p>
+            </div>
+            <div>email de contato:
+                <p id="emailResultado"></p>
+            </div>
+            <div>area de atuação:
+                <p id="atuaçãoResultado"></p>
+            </div>
+            <div>senioridade:
+                <p id="senioridadeResultado"></p>
+            </div>
+            <div>
+                <ul id="conhecimentoResultado">possui conhecimento nas seguintes tecnologias:
+                    <div>
+                        <li class="conhecimentoResultado"></li>
+                        <li class="conhecimentoResultado"></li>
+                        <li class="conhecimentoResultado"></li>
+                        <li class="conhecimentoResultado"></li>
+                        <li class="conhecimentoResultado"></li>
+                        <li class="conhecimentoResultado"></li>
+                        <li class="conhecimentoResultado"></li>
+                    </div>
+                </ul>
+            </div>
+            <div>sua experiencia:
+                <p id="experienciaResultado"></p>
+            </div>
+            <p class="p"><mark>esse resultado será enviado para o nosso RH</mark></p>
+        </div>
+    </div>
+
+
+    <script src="formulario.js"></script>
+</body>
+</html>

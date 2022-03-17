@@ -1,0 +1,91 @@
+#titulo2{
+    margin-top:50px;
+}
+.resultadoAparecer{
+    display:block !important;
+}
+#seuResultado{
+    display:none;
+    margin:0 auto;
+    h1{
+        text-align: center;
+    }
+    #resultado{
+        max-width:540px;
+        margin:10px 50px;
+        border:1px solid black;
+        padding:20px;
+        * + *{
+            margin-top:25px;
+        }
+        #resultadoLista {
+            li{
+                margin-top:0px !important;
+                margin-left:30px;
+            }
+        }
+        p{
+            text-align: center;
+            overflow-wrap: break-word;
+            max-width:100%;
+        }
+        div{
+            border:1px solid black;
+            padding:10px 20px;
+            font-weight: 700;
+            max-width:100%;
+            p{
+                font-weight: 100;
+                text-align: left;
+            }
+            #experienciaResultado{
+                margin-top: 20px;
+                display:block;
+                text-align: center;
+            }
+        }
+        #conhecimentoResultado{
+            font-weight: 700;
+            div{
+                border:none;
+                margin-top: 20px;
+                display:grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "l1 l2 l3 l4"
+                "l5 l6 l6 l7";
+                justify-content: center;
+                gap:10px 0;
+                text-align: center;
+                .conhecimentoResultado{
+                    list-style: none;
+                    align-self: center;
+                    text-align: center;
+                    margin:0;
+                    &:nth-child(1){
+                        grid-area:l1;
+                    }
+                    &:nth-child(2){
+                        grid-area:l2;
+                    }
+                    &:nth-child(3){
+                        grid-area:l3;
+                    }
+                    &:nth-child(4){
+                        grid-area:l4;
+                    }
+                    &:nth-child(5){
+                        grid-area:l5;
+                    }
+                    &:nth-child(6){
+                        grid-area:l6;
+                    }
+                    &:nth-child(7){
+                        grid-area:l7;
+                    }
+                }
+            }
+        }
+    }
+}

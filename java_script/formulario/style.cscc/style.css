@@ -1,0 +1,380 @@
+body {
+  background-color: #f0f8ff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #59429d;
+  width: 100%;
+  margin-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body * {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+}
+
+body #header #titulo {
+  font-family: sans-serif;
+  color: #380b61;
+}
+
+body #header #subtitulo {
+  font-family: sans-serif;
+  color: #380b61;
+  margin-left: 7%;
+  margin-bottom: 10px;
+}
+
+#header * {
+  text-align: center;
+}
+
+form {
+  border: 1px solid black;
+  margin-bottom: 30px;
+  margin: 0 auto;
+}
+
+form * {
+  max-width: 100%;
+}
+
+form input, form select, form textarea, form button {
+  border-radius: 5px;
+}
+
+form fieldset {
+  margin: 15px 30px;
+  border: none;
+}
+
+form fieldset legend {
+  margin-bottom: 10px;
+}
+
+form fieldset legend::after {
+  content: ':';
+}
+
+form fieldset input[type="text"], form fieldset input[type="email"], form fieldset textarea {
+  padding: 0.2rem;
+  border: 1px solid #59429d;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+form fieldset #nome:focus,
+form fieldset #sobrenome:focus,
+form fieldset #email:focus,
+form fieldset #experiencia:focus {
+  background-color: #f0f8ff;
+}
+
+form fieldset .campo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form fieldset .campo #email, form fieldset .campo #nome, form fieldset .campo #sobrenome {
+  max-width: 170px;
+}
+
+form fieldset .campo label {
+  margin-bottom: 0.2rem;
+  color: #59429d;
+  display: block;
+}
+
+form fieldset .campo select option {
+  padding-right: 1rem;
+}
+
+form fieldset .senior {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form fieldset .senior label {
+  margin-right: 10px;
+}
+
+form #botao {
+  font-size: 1.2rem;
+  background-color: #59429d;
+  color: #fff;
+  border: 0;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+
+form #botao:hover {
+  -webkit-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background: #ccbbff;
+  cursor: pointer;
+}
+
+.seta {
+  position: absolute;
+  top: 800px;
+  left: 7%;
+  -webkit-animation-name: seta;
+          animation-name: seta;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.seta2 {
+  position: absolute;
+  left: 92%;
+  -webkit-animation-name: seta;
+          animation-name: seta;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes seta {
+  50% {
+    -webkit-transform: translatey(100px);
+            transform: translatey(100px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes seta {
+  50% {
+    -webkit-transform: translatey(100px);
+            transform: translatey(100px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+#titulo2 {
+  margin-top: 50px;
+}
+
+.resultadoAparecer {
+  display: block !important;
+}
+
+#seuResultado {
+  display: none;
+  margin: 0 auto;
+}
+
+#seuResultado h1 {
+  text-align: center;
+}
+
+#seuResultado #resultado {
+  max-width: 540px;
+  margin: 10px 50px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#seuResultado #resultado * + * {
+  margin-top: 25px;
+}
+
+#seuResultado #resultado #resultadoLista li {
+  margin-top: 0px !important;
+  margin-left: 30px;
+}
+
+#seuResultado #resultado p {
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+#seuResultado #resultado div {
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-weight: 700;
+  max-width: 100%;
+}
+
+#seuResultado #resultado div p {
+  font-weight: 100;
+  text-align: left;
+}
+
+#seuResultado #resultado div #experienciaResultado {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+}
+
+#seuResultado #resultado #conhecimentoResultado {
+  font-weight: 700;
+}
+
+#seuResultado #resultado #conhecimentoResultado div {
+  border: none;
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "l1 l2 l3 l4" "l5 l6 l6 l7";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px 0;
+  text-align: center;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado {
+  list-style: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin: 0;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: l1;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: l2;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: l3;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: l4;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: l5;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: l6;
+}
+
+#seuResultado #resultado #conhecimentoResultado div .conhecimentoResultado:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: l7;
+}
+
+@media (min-width: 800px) {
+  form fieldset.grupo.grupo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 15px;
+  }
+  form #checkbox #divCheck {
+    width: 100%;
+  }
+  form #checkbox #divCheck div {
+    display: inline;
+  }
+  form #checkbox #divCheck div + div {
+    margin-left: 20px;
+  }
+  .seta {
+    top: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  #seuResultado {
+    margin-top: 30px;
+  }
+  .seta {
+    top: 1020px;
+    left: 30%;
+  }
+  .seta2 {
+    left: 68%;
+  }
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+body {
+  width: 100%;
+}
+
+body * {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=style.css.map */
