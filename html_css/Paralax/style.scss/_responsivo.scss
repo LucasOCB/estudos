@@ -1,0 +1,15 @@
+@media(max-width:1500px){
+    section{
+        div{
+            &:nth-child(1){
+                background-size: auto !important;
+                background-position: center!important;
+            }
+        }
+    }
+    #section1{
+        .divSection1{
+            background-position:0 -121px;
+        }
+    }
+}

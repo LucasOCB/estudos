@@ -1,0 +1,15 @@
+#section1{
+    .divSection1{
+        background-image: url(../fotos_cidades/image1.jpg);
+        background-position:0 -121px;
+        h1{
+            background-color:$cor2;
+        }
+    }
+    .div2Section1{
+        background-color:#f4f4f4;
+        *{
+            color:black;
+        }
+    }
+}

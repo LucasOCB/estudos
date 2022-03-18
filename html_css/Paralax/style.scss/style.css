@@ -1,0 +1,143 @@
+#section1 .divSection1 {
+  background-image: url(../fotos_cidades/image1.jpg);
+  background-position: 0 -121px;
+}
+
+#section1 .divSection1 h1 {
+  background-color: #111111;
+}
+
+#section1 .div2Section1 {
+  background-color: #f4f4f4;
+}
+
+#section1 .div2Section1 * {
+  color: black;
+}
+
+#section2 .divSection2 {
+  background-image: url(../fotos_cidades/image2.jpg);
+  height: 66vh;
+}
+
+#section2 .divSection2 h2 {
+  text-align: center;
+}
+
+#section2 .div2Section2 {
+  background-color: #282e34;
+}
+
+#section3 .divSection3 {
+  background-image: url(../fotos_cidades/image3.jpg);
+  height: 66vh;
+}
+
+#section3 .div2Section3 {
+  background-color: #282e34;
+}
+
+#section4 .divSection4 {
+  height: 100vh;
+  background-image: url(../fotos_cidades/image1.jpg);
+  background-position: 0 -121px;
+}
+
+#section4 .divSection4 h1 {
+  padding: 22px;
+  background-color: #111111;
+  padding: 18px;
+}
+
+@media (max-width: 1500px) {
+  section div:nth-child(1) {
+    background-size: auto !important;
+    background-position: center !important;
+  }
+  #section1 .divSection1 {
+    background-position: 0 -121px;
+  }
+}
+
+body {
+  width: 100%;
+}
+
+body * {
+  display: block;
+}
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+section div:nth-child(1) {
+  height: 100vh;
+  width: 100vw;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 70px 50px;
+  min-height: 33vh;
+}
+
+section div:nth-child(2) * {
+  max-width: 90%;
+  text-align: center;
+}
+
+section div:nth-child(2) h2 {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+section div:nth-child(2) p {
+  line-height: 30px;
+}
+
+h1 {
+  font-size: 29px;
+  padding: 19px;
+  margin-top: 25px;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 250;
+  letter-spacing: 7px;
+}
+
+h1, h2, p {
+  color: white;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
