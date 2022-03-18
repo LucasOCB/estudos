@@ -1,0 +1,44 @@
+body{
+    margin:0;
+    width:100%;
+    overflow: hidden;
+}
+#container{
+    max-width:600px;
+    max-height:500px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+.imagens{
+    position: relative;
+    height:500px;
+    width:1800px;
+    display:flex;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.62,.24,1,1);
+}
+.imagens img{
+    width:600px;
+}
+.botoes{
+    position:absolute;
+    bottom: 50px;
+    left: 48%;
+}
+.botao{
+    background-color:rgb(32, 193, 221);
+    width:15px;
+    height:15px;
+    border-radius: 100%;
+    border:none;
+    display:inline-block;
+}
+.botao:hover{
+    cursor:pointer;
+}
+.botao:active{
+    background-color:rgb(30, 48, 211);
+}
+#estagio1:target ~ .imagens{right:0;}
+#estagio2:target ~ .imagens{right:600px;}
+#estagio3:target ~ .imagens{right:1200px;}
