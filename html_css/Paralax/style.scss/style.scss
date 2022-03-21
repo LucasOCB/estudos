@@ -7,6 +7,9 @@ body{
         display:block;
     }
 }
+script{
+    display:none;
+}
 
 //mudanças que alteram mais de 1 elemento
 *{
@@ -17,7 +20,7 @@ section{
     div{
         &:nth-child(1){
             height:100vh;
-            width:100vw;
+            width:100%;
             background-size: 100%;
             background-repeat: no-repeat;
             background-attachment: fixed;
