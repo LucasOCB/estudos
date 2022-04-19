@@ -1,8 +1,7 @@
-var cronometro
-var hora = document.getElementById("hora");
-var minutos = document.getElementById("minutos");
-var segundos = document.getElementById("segundos");
 var DecimoSegundos = document.getElementById("DecimoSegundos");
+var segundos = document.getElementById("segundos");
+var minutos = document.getElementById("minutos");
+var hora = document.getElementById("hora");
 var inicio = document.getElementById("inicio");
 var parada = document.getElementById("parar");
 var reiniciar = document.getElementById("resetar");
@@ -10,8 +9,9 @@ var tempoDSegundos = 0
 var tempoSegundos = 0
 var tempoMinutos = 0
 var tempoHoras = 0
-var controle = 0
 var dia = 0
+var controle = 0
+var cronometro
 
 
 function digitos(a, b){
@@ -64,8 +64,6 @@ function stop(){
     clearInterval(cronometro);
     controle = 0
 }
-
-
 
 inicio.onclick = function(){
     if(controle == 0){

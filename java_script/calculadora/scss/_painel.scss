@@ -1,0 +1,17 @@
+
+.painel{
+    height:200px;
+    .painelAntes{
+        height:28px;
+        text-align:right;
+        font-size: 1.5em;
+        padding:25px 15px 10px 0;
+    }
+    .painelAgora{
+        float:bottom;
+        text-align: right;
+        font-size: 2.5em;
+        padding:0 10px;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,29 @@
+.botoes{
+    height:100%;
+    gap:10px;
+    padding:10px 20px;
+    display:grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    *{
+        border:none;
+        font-size: 1.4em;
+        border-radius:10px;
+        background-color:$cor3;
+        transition-duration: 0.2s;
+        &:hover{
+            cursor:pointer;
+            border:1px solid white;
+        }
+    }
+}
+.botoesCor{
+    background-color: $cor2;
+    &:hover{
+        background-color:white;
+        color:black !important;
+    }
+}
+.botoesEspaço{
+    grid-column:1 / 3;
+}
