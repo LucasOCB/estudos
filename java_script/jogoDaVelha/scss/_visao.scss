@@ -1,0 +1,31 @@
+.visao0{
+    &::after, &::before{
+        content: "";
+        width: calc(100px * 0.15);
+        height: calc(100px * 0.9);
+        background: white;
+        position: absolute;
+        opacity:0.6;
+        left:42%;
+        top:5%;
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+    &::before{
+        transform: rotate(-45deg);
+    }
+}
+.visao1{
+    &::after{
+        content: "";
+        width: calc(100px * 0.85);
+        height: calc(100px * 0.85);
+        border-radius:50%;
+        background: white;
+        position: absolute;
+        opacity:0.6;
+        left:7.5%;
+        top:7.5%;
+    }
+}

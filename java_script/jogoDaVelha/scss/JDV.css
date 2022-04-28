@@ -1,0 +1,188 @@
+.mensagem-vitoria {
+  opacity: 0;
+  position: absolute;
+  top: -1000px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#000000e0), to(#000000a8));
+  background: linear-gradient(to right, #000000e0, #000000a8);
+}
+
+.mensagem-vitoria * {
+  color: white;
+}
+
+.mensagem-vitoria .posicionamento {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mensagem-vitoria .posicionamento h1 {
+  font-size: 3em;
+}
+
+.mensagem-vitoria .posicionamento #reiniciar {
+  font-size: 1.5em;
+  border: none;
+  border-radius: 3px;
+  padding: 7px;
+  background-color: #19af8a;
+}
+
+.mensagem-vitoria .posicionamento #reiniciar:hover {
+  cursor: pointer;
+}
+
+.mensagem-vitoria .posicionamento #reiniciar:active {
+  background-color: #19af89a9;
+}
+
+.mensagem-vitoria-simbolo {
+  top: 0 !important;
+  opacity: 1 !important;
+}
+
+.jdv {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jdv #tabuleiro {
+  width: 300px;
+  height: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 100px 100px;
+      grid-template-columns: 100px 100px 100px;
+  -ms-grid-rows: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+}
+
+.jdv #tabuleiro .jdv-simbolo {
+  border: 1px solid white;
+}
+
+.jdv #tabuleiro .jdv-simbolo:nth-child(-n+3) {
+  border-top: none;
+}
+
+.jdv #tabuleiro .jdv-simbolo:nth-child(n+7):nth-child(-n+9) {
+  border-bottom: none;
+}
+
+.jdv #tabuleiro .jdv-simbolo:nth-child(1), .jdv #tabuleiro .jdv-simbolo:nth-child(4), .jdv #tabuleiro .jdv-simbolo:nth-child(7) {
+  border-left: none;
+}
+
+.jdv #tabuleiro .jdv-simbolo:nth-child(3), .jdv #tabuleiro .jdv-simbolo:nth-child(6), .jdv #tabuleiro .jdv-simbolo:nth-child(9) {
+  border-right: none;
+}
+
+#tabuleiro .jdv-simbolo {
+  position: relative;
+}
+
+#tabuleiro .jdv-simbolo:hover {
+  cursor: pointer;
+}
+
+#tabuleiro .simbolo-0::after, #tabuleiro .simbolo-0::before {
+  content: "";
+  width: calc(100px * 0.15);
+  height: calc(100px * 0.9);
+  background: white;
+  opacity: 1 !important;
+  position: absolute;
+  left: 42%;
+  top: 5%;
+}
+
+#tabuleiro .simbolo-0::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#tabuleiro .simbolo-0::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#tabuleiro .simbolo-1::after {
+  content: "";
+  width: calc(100px * 0.85);
+  height: calc(100px * 0.85);
+  border-radius: 50%;
+  opacity: 1 !important;
+  background: white;
+  position: absolute;
+  left: 7.5%;
+  top: 7.5%;
+}
+
+#tabuleiro .simbolo-0:hover, #tabuleiro .simbolo-1:hover {
+  cursor: not-allowed;
+}
+
+.visao0::after, .visao0::before {
+  content: "";
+  width: calc(100px * 0.15);
+  height: calc(100px * 0.9);
+  background: white;
+  position: absolute;
+  opacity: 0.6;
+  left: 42%;
+  top: 5%;
+}
+
+.visao0::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.visao0::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.visao1::after {
+  content: "";
+  width: calc(100px * 0.85);
+  height: calc(100px * 0.85);
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  opacity: 0.6;
+  left: 7.5%;
+  top: 7.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#41b983), to(#00d4ff));
+  background: linear-gradient(to right, #41b983, #00d4ff);
+}
+/*# sourceMappingURL=JDV.css.map */

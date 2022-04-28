@@ -1,0 +1,44 @@
+#tabuleiro{
+    .jdv-simbolo{
+        position: relative;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .simbolo-0{
+        &::after, &::before{
+            content: "";
+            width: calc(100px * 0.15);
+            height: calc(100px * 0.9);
+            background: white;
+            opacity:1 !important;
+            position: absolute;
+            left:42%;
+            top:5%;
+        }
+        &::after{
+            transform: rotate(45deg);
+        }
+        &::before{
+            transform: rotate(-45deg);
+        }
+    }
+    .simbolo-1{
+        &::after{
+            content: "";
+            width: calc(100px * 0.85);
+            height: calc(100px * 0.85);
+            border-radius:50%;
+            opacity:1 !important;
+            background: white;
+            position: absolute;
+            left:7.5%;
+            top:7.5%;
+        }
+    }
+    .simbolo-0, .simbolo-1{
+        &:hover{
+            cursor:not-allowed;
+        }
+    }
+}

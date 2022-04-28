@@ -12,6 +12,32 @@ class ModeloCalculadora{
         this.painel2 = painel2
         this.limpaDado();
     }
+    addNumero(dado){
+        if(this.painel2Dado.includes(".") && dado === "."){
+            return
+        }
+        if(this.painel2Dado === "" && dado === "."){
+            return
+        }
+        this.painel2Dado = `${this.painel2Dado}${dado.toString()}`
+    }
+    addOperador(dado){
+        if(this.painel2Dado === ""){
+            return
+        }
+        if(this.painel2Dado.toString().includes(".") && this.painel2Dado.toString().slice(-1) === "."){
+            return
+        }
+        if(this.painel2Dado.toString().slice(-1) === "0" && this.painel2Dado.toString().slice(-2, -1) === "."){
+            this.painel2Dado = this.painel2Dado.slice(0, -2) 
+        }
+        if(this.painel2Dado !== "" && this.painel1Dado !== ""){
+            this.calculo()
+        }
+        this.operador = dado
+        this.painel1Dado = this.painel2Dado
+        this.painel2Dado = ""
+    }
     calculo(){
         let resultado
         const a = parseFloat(this.painel1Dado)
@@ -43,32 +69,6 @@ class ModeloCalculadora{
         }
         this.painel2Dado = this.painel2Dado.toString().slice(0, -1)
         this.atualizarTexto();
-    }
-    addNumero(dado){
-        if(this.painel2Dado.includes(".") && dado === "."){
-            return
-        }
-        if(this.painel2Dado === "" && dado === "."){
-            return
-        }
-        this.painel2Dado = `${this.painel2Dado}${dado.toString()}`
-    }
-    addOperador(dado){
-        if(this.painel2Dado === ""){
-            return
-        }
-        if(this.painel2Dado.toString().includes(".") && this.painel2Dado.toString().slice(-1) === "."){
-            return
-        }
-        if(this.painel2Dado.toString().slice(-1) === "0" && this.painel2Dado.toString().slice(-2, -1) === "."){
-            this.painel2Dado = this.painel2Dado.slice(0, -2) 
-        }
-        if(this.painel2Dado !== "" && this.painel1Dado !== ""){
-            this.calculo()
-        }
-        this.operador = dado
-        this.painel1Dado = this.painel2Dado
-        this.painel2Dado = ""
     }
     limpaDado(){
         this.painel1Dado = "";
