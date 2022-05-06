@@ -5,11 +5,23 @@ const botaoReset = document.querySelector("#reiniciar")
 const mensagemVitoriaQuem = document.querySelector("#quemGanho")
 var visao = 0
 var simbolo  = 0
+var contagemEmpate = 0
+var alguemVenceu = false
 function limparVisao(painelSobre) {
     painelSobre.classList.remove("visao0")
     painelSobre.classList.remove("visao1")
 }
+function validarEmpate(){
+    ++contagemEmpate 
+    if(contagemEmpate === 9){
+        mensagemVitoria.classList.add("mensagem-vitoria-simbolo")
+        mensagemVitoriaQuem.innerText = "empate!"
+    }
+}
 function validarVitoria() {
+    var ocorreuEmpate
+    ciclo("1");
+    ciclo("0");
     function ciclo(simbolo){
         //Horizontal
         if(
@@ -23,7 +35,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         if(
             simbolos[3].classList.contains(`simbolo-${simbolo}`) == true && 
@@ -36,7 +48,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         if(
             simbolos[6].classList.contains(`simbolo-${simbolo}`) == true && 
@@ -49,7 +61,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         //Vertical
         if(
@@ -63,7 +75,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         if(
             simbolos[1].classList.contains(`simbolo-${simbolo}`) == true && 
@@ -76,7 +88,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         if(
             simbolos[2].classList.contains(`simbolo-${simbolo}`) == true && 
@@ -89,7 +101,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         //Diagonal
         if(
@@ -103,7 +115,7 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }
         if(
             simbolos[2].classList.contains(`simbolo-${simbolo}`) == true && 
@@ -116,15 +128,20 @@ function validarVitoria() {
             }else{
                 mensagemVitoriaQuem.innerText = `X ${mensagemVitoriaQuem.innerText}` 
             }
-            return
+            ocorreuEmpate = false
         }    
     }
-    ciclo("1");
-    ciclo("0");
+    if (ocorreuEmpate == false){
+        return true;
+    } else{
+        return false;
+    }
 }
 function reset(){
     visao = 0
     simbolo = 0
+    contagemEmpate = 0
+    alguemVenceu = false
     mensagemVitoria.classList.remove("mensagem-vitoria-simbolo")
     for(const limparSimbolos of simbolos ){
         limparSimbolos.classList.remove("simbolo-0")
@@ -157,11 +174,14 @@ for(const simboloClick of simbolos){
         simboloClick.classList.add(`simbolo-${simbolo % 2}`)
         simbolo += 1
         visao += 1
-        validarVitoria();
+        alguemVenceu = validarVitoria();
+        if (alguemVenceu == true){
+            contagemEmpate = 0
+        }else {
+            validarEmpate();  
+        }
     })
 }
 botaoReset.addEventListener('click', () => {
     reset();
 })
-
-
